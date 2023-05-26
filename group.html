@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Details</title>
+</head>
+<body>
+    <h1>Group: {{ group_name }}</h1>
+    <h2>Purpose: {{ group.purpose }}</h2>
+    <h3>Expenses:</h3>
+    <ul>
+        {% for expense_id, expense in group.expenses.items() %}
+        <li>
+            <strong>Expense ID:</strong> {{ expense_id }}<br>
+            <strong>User:</strong> {{ expense.user }}<br>
+            <strong>Amount:</strong> {{ expense.amount }}<br>
+            <strong>Description:</strong> {{ expense.description }}<br>
+            <strong>Receipt:</strong> <a href="{{ expense.receipt }}" target="_blank">View Receipt</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- Add links and buttons to navigate to different pages -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Record Payment</title>
+</head>
+<body>
+    <h1>Record Payment for Group: {{ group_name }}</h1>
+    <form action="/group/{{ group_name }}/record_payment" method="POST">
+        <label for="payer">Payer:</label>
+        <input type="text" id="payer" name="payer"><br><br>
+
